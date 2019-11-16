@@ -12,5 +12,5 @@
   <%= @user.email %>
 </p>
 
-<%= link_to '設定変更', edit_user_path(@user) %> |
-<%= link_to '戻る', users_path %>
+<%= link_to '設定変更', edit_user_path(@user), class: 'btn btn-success' %> |
+<%= link_to '投稿一覧へ', pictures_path, class: 'btn btn-warning' %> |

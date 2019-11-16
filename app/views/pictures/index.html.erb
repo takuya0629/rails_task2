@@ -17,6 +17,7 @@
       <tr>
         <td><%= picture.title %></td>
         <td><%= picture.content %></td>
+        <td><%= link_to picture.user.name, user_path(picture.user.id) %></td>
         <td><%= link_to '詳細を見る', picture %></td>
         <td><%= link_to '編集する', edit_picture_path(picture) %></td>
         <td><%= link_to '削除する', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
