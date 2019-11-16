@@ -1,10 +1,10 @@
 ja:
   activerecord:
     models:
-      blog: ブログ
+      picture: ピクチャー
       user: ユーザー
     attributes:
-      blog:
+      picture:
         title: タイトル
         content: 内容
       user:
@@ -15,3 +15,4 @@ ja:
         password: パスワード
         password_confirmation: 確認用パスワード
         remember_me: ログインを記憶
+        password_digest: パスワード
