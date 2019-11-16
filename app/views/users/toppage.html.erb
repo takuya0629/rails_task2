@@ -1,0 +1,19 @@
+<div class="toppage">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-1 toppage_center">
+      <h2><%= link_to "ログイン", new_session_path, class: 'btn btn-info login_btn'%></h2>
+      <br>
+      <h4><%= link_to "初めての方はこちら", new_session_path %></h4>
+    </div>
+    <div class="col-md-2 toppage_right">
+      <h1>登録者一覧</h1>
+      <br>
+      <h3><% @users.each do |user| %>
+        <br>
+        <%= user.name %>
+        <br>
+      <% end %>
+      </h3>
+    </div>
+  </div>
+</div>
