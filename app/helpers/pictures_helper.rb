@@ -4,7 +4,7 @@ module PicturesHelper
       confirm_pictures_path
     else
       action_name == 'edit'
-      pictures_path
+      picture_path
     end
   end
 end
