@@ -1,6 +1,8 @@
-<h1>Editing Picture</h1>
+<h1>編集画面</h1>
+<br>
 
 <%= render 'form', picture: @picture %>
 
-<%= link_to 'Show', @picture %> |
-<%= link_to 'Back', pictures_path %>
+<br>
+<%= link_to '詳細画面へ', @picture, class: 'btn btn-success' %> |
+<%= link_to '投稿一覧へ', pictures_path, class: 'btn btn-warning' %> 

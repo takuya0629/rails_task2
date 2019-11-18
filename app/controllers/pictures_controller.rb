@@ -27,12 +27,16 @@ class PicturesController < ApplicationController
     @picture = current_user.pictures.build(picture_params)
 
     respond_to do |format|
-      if @picture.save
-        format.html { redirect_to @picture, notice: '投稿が完了しました.' }
-        format.json { render :show, status: :created, location: @picture }
-      else
+      if params[:back]
         format.html { render :new }
-        format.json { render json: @picture.errors, status: :unprocessable_entity }
+      else
+        if @picture.save
+          format.html { redirect_to @picture, notice: '投稿が完了しました.' }
+          format.json { render :show, status: :created, location: @picture }
+        else
+          format.html { render :new }
+          format.json { render json: @picture.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -74,6 +78,6 @@ class PicturesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def picture_params
-      params.require(:picture).permit(:title, :content)
+      params.require(:picture).permit(:title, :content, :image, :image_cache)
     end
 end

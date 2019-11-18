@@ -9,5 +9,13 @@
   <%= @picture.content %>
 </p>
 
-<%= link_to 'Edit', edit_picture_path(@picture), class: 'btn btn-success' %> |
-<%= link_to 'Back', pictures_path class: 'btn btn-warning'  %>
+<% if @picture.image? %>
+  <%= image_tag @picture.image.url, :size =>'410x300' %>
+<% end %>
+
+<br>
+<br>
+<%= link_to '編集する', edit_picture_path(@picture), class: 'btn btn-success' %> |
+<%= link_to '戻る', pictures_path, class: 'btn btn-warning' %>
+
+

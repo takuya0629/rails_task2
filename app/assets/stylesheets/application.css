@@ -52,6 +52,9 @@ table {
   padding: 2rem;
 }
 
+.image_area {
+  display: inline-block;
+}
 
 
 
