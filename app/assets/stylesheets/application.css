@@ -56,7 +56,9 @@ table {
   display: inline-block;
 }
 
-
+.index_main {
+  position: relative;
+}
 
 
 
