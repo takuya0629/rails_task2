@@ -22,8 +22,8 @@
       <%= link_to '詳細を見る', picture %>
       <% if current_user.id == picture.user_id %>
         <%= link_to '編集する', edit_picture_path(picture) %>
+        <%= link_to '削除する', picture, method: :delete, data: { confirm: '本当に削除しますか?' } %>
       <% end %>
-      <%= link_to '削除する', picture, method: :delete, data: { confirm: '本当に削除しますか?' } %>
       <br>
       <br>
     </div>    
