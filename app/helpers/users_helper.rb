@@ -4,7 +4,7 @@ module UsersHelper
       confirm_users_path
     else
       action_name == 'edit'
-      users_path
+      user_path
     end
   end
 end
