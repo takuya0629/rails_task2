@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: 'users#toppage'
-  resources :sessions, only: [:new, :create, :destroy]
+  resources :sessions, only: %w!new create destroy!
   
   resources :users do 
     collection do 
