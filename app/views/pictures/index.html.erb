@@ -20,7 +20,9 @@
       <br>
       <h4>投稿者：<%= link_to picture.user.name, user_path(picture.user.id) %></h4>
       <%= link_to '詳細を見る', picture %>
-      <%= link_to '編集する', edit_picture_path(picture) %>
+      <% if current_user.id == picture.user_id %>
+        <%= link_to '編集する', edit_picture_path(picture) %>
+      <% end %>
       <%= link_to '削除する', picture, method: :delete, data: { confirm: '本当に削除しますか?' } %>
       <br>
       <br>

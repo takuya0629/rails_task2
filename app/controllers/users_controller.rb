@@ -37,11 +37,13 @@ class UsersController < ApplicationController
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
+       end
     end
   end
 
   def confirm
+    @user = User.new(user_params)
+    render :new if @user.invalid?
   end
 
   # PATCH/PUT /users/1

@@ -1,1 +1,18 @@
-<h1>ok</h1>
+<h3>登録内容を確認してください</h3>
+
+<%= form_with(model: @user, local: true, url: users_path) do |form| %>
+  <%= form.hidden_field :email %>
+  <%= form.hidden_field :name %>
+  <%= form.hidden_field :password %>
+  <%= form.hidden_field :password_confirmation %>
+
+  
+
+  <p>ユーザー名：<%= @user.name %></p>
+  <p>メールアドレス：<%= @user.email %></p>
+
+  <br>
+  <br>
+  <%= form.submit "作成する", class: 'btn btn-success'%>
+  <%= form.submit "戻る", name: 'back', class: 'btn btn-warning' %>
+<% end %>

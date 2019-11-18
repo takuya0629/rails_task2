@@ -20,9 +20,11 @@
 }
 
 body {
+  margin: 0 auto;
   text-align: center;
   background-color: #e0ffff;
   font-family: sans-serif;
+  list-style: none;
 }
 
 .toppage_left {
@@ -60,9 +62,12 @@ table {
   position: relative;
 }
 
+ul {
+  list-style: none;
+}
 
-
-
-
+.errors {
+  margin: 0 auto;
+}
 
 
